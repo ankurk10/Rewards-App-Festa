@@ -1,63 +1,82 @@
-import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:flutter/material.dart';
+import 'package:rewards_app/pay_screen.dart';
+import 'package:rewards_app/rewards_screen.dart';
+import 'package:rewards_app/benefits_screen.dart';
+import 'package:rewards_app/career_screen.dart';
 
-class bottom_nav extends StatefulWidget {
-  const bottom_nav({required Key key}) : super(key: key);
+void main() => runApp(MyApp());
 
+class MyApp extends StatelessWidget {
   @override
-  _bottom_navState createState() => _bottom_navState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
 }
 
-class _bottom_navState extends State<bottom_nav> {
-  int _selectedIndex = 0;
-  final List<Widget> _widgetOptions = <Widget>[
-    //Home(),
-    Text('Messgaes Screen'),
-    Text('Profile Screen'),
-  ];
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  void _onItemTap(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int currentIndex = 0;
+  List<Widget> _listPages=[PayScreen(),RewardScreen(),BenefitsScreen(),CareerScreen()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
-            title: Text(
-              'Home',
-            ),
+      body: _listPages[currentIndex],
+
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: currentIndex,
+        showElevation: true,
+        itemCornerRadius: 8,
+        curve: Curves.easeInBack,
+        onItemSelected: (index) => setState(() {
+          currentIndex = index;
+        }),
+        items: [
+          BottomNavyBarItem(
+            icon: Icon(Icons.payments_outlined),
+            title: Text('Pay'),
+            activeColor: Colors.red,
+            textAlign: TextAlign.center,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.message,
-            ),
-            title: Text(
-              'Messages',
-            ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.paid_outlined),
+            title: Text('Rewards'),
+            activeColor: Colors.purpleAccent,
+            textAlign: TextAlign.center,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-            ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.redeem),
             title: Text(
-              'Profile',
+              'Benefits',
             ),
+            activeColor: Colors.pink,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.work_outlined),
+            title: Text('Career'),
+            activeColor: Colors.blue,
+            textAlign: TextAlign.center,
           ),
         ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTap,
-        selectedFontSize: 13.0,
-        unselectedFontSize: 13.0,
       ),
     );
   }

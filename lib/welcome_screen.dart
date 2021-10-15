@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rewards_app/home_screen.dart';
 import 'package:rewards_app/bottom_nav.dart';
 
 class welcome_screen extends StatefulWidget {
@@ -95,7 +94,7 @@ class _welcome_screenState extends State<welcome_screen> {
                   {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context){
-                          return home_screen();
+                          return MyApp();
                         }
                     ));
                   },
