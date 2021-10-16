@@ -18,7 +18,7 @@ class PayScreen extends StatelessWidget {
                   "My Cash",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.teal,
+                    color: Color(0xFFE57373),
                     fontSize: 35,
                     fontWeight: FontWeight.w600,
                   ),
@@ -31,22 +31,23 @@ class PayScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   color: Colors.white,
-                  elevation: 2,
+                  //elevation: 2,
                   child: Container(
                     height: 200,
                     width: 300,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(color: Color(0xFFE57373), width:2),
                       borderRadius: BorderRadius.circular(15),
                     ),
 
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
-                        'Base Pay : 1,200,000 \n\nAllowances : 1,200,000 \n\nBonus : 1,200,000 \n\n LTIP : 1,200,000' ,
+                        'Base Pay                  1,200,000\n\nAllowances              1,200,000\n\nBonus                       1,200,000\n\nLTIP                          1,200,000' ,
                         maxLines: 20,
                         style: TextStyle(
                           fontSize: 20,
+                          color: Color(0xFFE57373)
                         ),
                       ),
                     ),

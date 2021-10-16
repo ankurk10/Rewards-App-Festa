@@ -18,7 +18,7 @@ class RewardScreen extends StatelessWidget {
                   "My Rewards",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.teal,
+                    color: Colors.purpleAccent,
                     fontSize: 35,
                     fontWeight: FontWeight.w600,
                   ),
@@ -36,7 +36,7 @@ class RewardScreen extends StatelessWidget {
                     height: 200,
                     width: 300,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(color: Colors.purpleAccent, width:2),
                       borderRadius: BorderRadius.circular(15),
                     ),
 
@@ -47,6 +47,7 @@ class RewardScreen extends StatelessWidget {
                             "support your loved ones. Details are"
                             " @the policy page",
                         style: TextStyle(
+                          color: Colors.purpleAccent,
                           fontSize: 20,
                         ),
                       ),
@@ -65,8 +66,8 @@ class RewardScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SwitcherButton(
-                      offColor: Colors.grey,
-                      onColor: Colors.green,
+                      offColor: Colors.blueGrey,
+                      onColor: Colors.purpleAccent,
                       value: true,
                       onChange: (value) {
                         print(value);

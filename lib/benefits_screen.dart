@@ -14,10 +14,10 @@ class BenefitsScreen extends StatelessWidget {
               const Center(
                 heightFactor: 4,
                 child: Text(
-                  "My Cash",
+                  "My Benefits",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.teal,
+                    color: Colors.red,
                     fontSize: 35,
                     fontWeight: FontWeight.w600,
                   ),
@@ -35,16 +35,17 @@ class BenefitsScreen extends StatelessWidget {
                     height: 400,
                     width: 400,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(color: Colors.red, width:2),
                       borderRadius: BorderRadius.circular(15),
                     ),
 
                     child: const Padding(
                       padding: EdgeInsets.all(12),
                       child: Text(
-                        'Health Insurance : 5,00,000 \n\nAccident Cover : 15,00,000 \n\nLife Cover : 10,00,000 \n\n EPF : 21,000 \n\n EDLI : 21,000 \n\n Gratuity : 21,000 \n\n Internet : 21,000 \n\n Leave Encashment : 21,000' ,
+                        'Health Insurance                   5,00,000 \n\nAccident Cover                    15,00,000 \n\nLife Cover                             10,00,000\n\nEPF                                        21,000\n\nEDLI                                      21,000\n\nGratuity                                21,000 \n\nInternet                                21,000 \n\nLeave Encashment           21,000' ,
                         maxLines: 20,
                         style: TextStyle(
+                          color: Colors.red,
                           fontSize: 20,
                         ),
                       ),

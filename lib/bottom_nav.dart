@@ -63,13 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text(
               'Benefits',
             ),
-            activeColor: Colors.pink,
+            activeColor: Colors.red,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             icon: Icon(Icons.work_outlined),
             title: Text('Career'),
-            activeColor: Colors.blue,
+            activeColor: Colors.pink,
             textAlign: TextAlign.center,
           ),
         ],

@@ -17,7 +17,7 @@ class CareerScreen extends StatelessWidget {
                   "My Career",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.teal,
+                    color: Colors.pink,
                     fontSize: 35,
                     fontWeight: FontWeight.w600,
                   ),
@@ -51,7 +51,7 @@ class CareerScreen extends StatelessWidget {
                   height: 60,
                   onPressed: () {
                   },
-                  color: Colors.teal,
+                  color: Colors.pink,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
