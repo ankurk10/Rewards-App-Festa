@@ -75,7 +75,23 @@ class RewardScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+
+              const SizedBox(
+                height: 150,
+                width: 20,
+              ),
+
+              const Text(
+                "My Company",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.purpleAccent,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+
             ],
           ),
         ),

@@ -58,7 +58,7 @@ class CareerScreen extends StatelessWidget {
 
                   ),
                   child: Text(
-                    "Sign up", style: TextStyle(
+                    "Get your mentor", style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 18,
                     color: Colors.white,
@@ -71,6 +71,21 @@ class CareerScreen extends StatelessWidget {
 
 
 
+              ),
+
+              const SizedBox(
+                height: 50,
+                width: 20,
+              ),
+
+              const Text(
+                "Career Progression",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.pinkAccent,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),

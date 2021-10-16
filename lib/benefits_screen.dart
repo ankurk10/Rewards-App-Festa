@@ -60,6 +60,21 @@ class BenefitsScreen extends StatelessWidget {
                 width: 20,
               ),
 
+              const SizedBox(
+                height: 30,
+                width: 20,
+              ),
+
+              const Text(
+                "Benefits Policy",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+
             ],
           ),
         ),

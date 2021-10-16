@@ -56,9 +56,21 @@ class PayScreen extends StatelessWidget {
               ),
 
 
-              SizedBox(
-                height: 20,
+
+
+              const SizedBox(
+                height: 200,
                 width: 20,
+              ),
+
+              const Text(
+                "Compensation Policy",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFFE57373),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
 
             ],
